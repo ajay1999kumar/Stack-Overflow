@@ -1,0 +1,62 @@
+<%- include("../partials/header")%>
+
+
+<div class="container">
+	
+	<header class="jumbotron">
+		<div class="container">
+			<h1> Welcome to Stack Overflow! </h1>
+			<p>View all the questions here...</p>
+			<p>	<a class="btn btn-primary btn-lg"href="/question/new" >Add new question</a>	</p>
+
+
+			
+		</div>
+		
+		
+		
+	</header>
+	
+	<div class="row ">
+		<div class="col-lg-12">
+			<h3>	Most popular site!  </h3>
+		</div>
+		
+	</div>
+	
+	<div class="row text-center" style="display: flex;flex-wrap: wrap" >
+	  <% question.forEach(function(qstns){ %>
+			
+		<div class="col-lg-3 col-md-4 col-sm-6"  >
+			<div class="thumbnail">
+				<img src="<%=qstns.image%>">
+				<div class="caption">
+					<h4> <%=qstns.name%> </h4>
+				</div>
+				<p>
+					<a href="/question/<%=qstns._id%>" class="btn btn-primary btn-sm">More Info</a>
+				</p>
+				
+			</div>
+			
+				
+				
+			
+			
+	
+			
+		</div>
+	  <% }) %>
+		
+	</div>
+	
+	
+
+	
+
+	
+	
+</div>
+
+
+<%- include("../partials/footer")%>
